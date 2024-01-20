@@ -1,5 +1,3 @@
-Sure, here's a basic `README.md` for your frontend project:
-
 ```markdown
 # Calendly-like Calendar Date Picker
 

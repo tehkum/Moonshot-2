@@ -10,10 +10,12 @@ import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutli
 import loader from "../../assets/loading.svg";
 import { useMemo, useState } from "react";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { toast } from "react-toastify";
 
 export default function MapLayout() {
   const { filterData, setSelected, selected, fullDate, loading } = UseData();
   const [variant, setVariant] = useState(60);
+  const [isSelected, setIsSelected] = useState(false);
 
   const showData = useMemo(() => {
     return filterData?.slots?.filter(
@@ -62,7 +64,10 @@ export default function MapLayout() {
                       className={
                         index === selected ? "slot-chip-active" : "slot-chip"
                       }
-                      onClick={() => setSelected(index)}
+                      onClick={() => {
+                        setSelected(index);
+                        setIsSelected(true);
+                      }}
                     >
                       {getReadableTime(slot?.start_time)} -{" "}
                       {getReadableTime(slot?.end_time)}
@@ -81,7 +86,17 @@ export default function MapLayout() {
       </div>
       <div className="cal-bottom">
         <p>POWERED BY TEHKUM</p>
-        <button>
+        <button
+          onClick={() => {
+            if (isSelected) {
+              setSelected(null);
+              toast.success("Booked Successfully");
+              setIsSelected(false);
+            } else {
+              toast.error("Select Slot");
+            }
+          }}
+        >
           Next{" "}
           <KeyboardArrowDownIcon
             sx={{ color: "var(--primary-color)", transform: "rotate(-90deg)" }}

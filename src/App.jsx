@@ -7,6 +7,8 @@ import Sidelines, {
   SidelineD,
   SidelineE,
 } from "./Components/sidelines/Sideline1";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -29,6 +31,7 @@ function App() {
       <SidelineC />
       <SidelineD />
       <SidelineE />
+      <ToastContainer />
     </>
   );
 }

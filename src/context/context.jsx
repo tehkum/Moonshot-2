@@ -1,6 +1,7 @@
 import axios from "axios";
 import { PropTypes } from "prop-types";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
+import { toast } from "react-toastify";
 
 export const DataContext = createContext({});
 
@@ -18,10 +19,9 @@ const DataProvider = ({ children }) => {
         const res = await axios.get(
           "https://app.appointo.me/scripttag/mock_timeslots?start_date=2024-01-20&end_date=2024-01-30"
         );
-        console.log(res);
         setData(res.data);
       } catch (error) {
-        console.log(error);
+        toast.error(error.message);
       } finally {
         setLoading(false);
       }

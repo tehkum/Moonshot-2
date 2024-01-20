@@ -10,6 +10,7 @@
 
 .cal-container .cal-upper {
     display: flex;
+    /* flex-wrap: wrap; */
 }
 
 .cal-container .section-calendar {
@@ -111,8 +112,8 @@
 .cal-container .section-show label select option {
     color: #555770;
     font-weight: bold;
-    line-height: 16px;
-    margin-bottom: 16px;
+    /* line-height: 16px;
+    margin-bottom: 16px; */
     outline: none;
     transition: background-color 0.3s ease-in-out;
 }
@@ -255,4 +256,35 @@ hr {
 
 .cal-container .section-show .loading img {
     animation: imageAnimation 2s infinite;
+}
+
+@media screen and (max-width: 768px) {
+    .cal-container {
+        width: 100%;
+        border-radius: 0;
+        gap: 10px
+    }
+
+    .cal-container .cal-upper {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .cal-container .section-calendar {
+        width: 100%;
+    }
+
+    .cal-container .section-show {
+        margin-bottom: 10px;
+    }
+
+    .cal-container .section-show-base {
+        width: 300px;
+        overflow-y: visible;
+        margin-bottom: 10px;
+    }
+
+
 }

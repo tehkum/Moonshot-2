@@ -1,4 +1,3 @@
-```markdown
 # Calendly-like Calendar Date Picker
 
 ## Overview
@@ -16,13 +15,13 @@ This project is a frontend application that replicates the functionality of the 
 1. Clone the repository:
 ```
 
-git clone https://github.com/yourusername/calendly-clone.git
+git clone https://github.com/tehkum/Moonshot-2
 
 ```
 2. Navigate to the project directory:
 ```
 
-cd calendly-clone
+cd moonshot-2
 
 ```
 3. Install the dependencies:
@@ -40,7 +39,7 @@ To start the application, run:
 npm start
 
 ```
-The application will start and can be accessed at `http://localhost:3000`.
+The application will start and can be accessed at `http://localhost:5173`.
 
 ## Contributing
 
@@ -50,5 +49,3 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 [MIT](https://choosealicense.com/licenses/mit/)
 ```
-
-Please replace `yourusername` with your actual GitHub username and update the repository link accordingly. This is a basic template, feel free to modify it according to your project's requirements.

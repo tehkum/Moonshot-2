@@ -46,3 +46,10 @@ header .menu-items .share-btn:hover {
     color: white;
     transition: background-color 0.3s ease-in-out;
 }
+
+.menu-btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}

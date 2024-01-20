@@ -1,0 +1,49 @@
+.sideLine-a {
+    width: 400px;
+    background-color: #CCE7E0;
+    height: 70px;
+    transform: rotate(-15deg);
+    position: fixed;
+    bottom: 100px;
+    left: -100px;
+}
+
+.sideLine-b {
+    width: 400px;
+    background-color: #EDF9F1;
+    height: 70px;
+    transform: rotate(-15deg);
+    position: fixed;
+    bottom: 14px;
+    left: -150px
+}
+
+.sideLine-c {
+    width: 400px;
+    background-color: var(--primary-color);
+    height: 70px;
+    transform: rotate(-15deg);
+    position: fixed;
+    bottom: 400px;
+    right: -150px;
+}
+
+.sideLine-d {
+    width: 400px;
+    background-color: #CCE7E0;
+    height: 70px;
+    transform: rotate(-15deg);
+    position: fixed;
+    bottom: 313px;
+    right: -100px;
+}
+
+.sideLine-e {
+    width: 400px;
+    background-color: #EDF9F1;
+    height: 70px;
+    transform: rotate(-15deg);
+    position: fixed;
+    bottom: 254px;
+    right: -150px
+}

@@ -1,12 +1,25 @@
 import { UseData } from "../../context/context";
-import { formatToCustomString, getReadableTime } from "../../utils";
+import {
+  formatToCustomString,
+  getReadableTime,
+  timeDifference,
+} from "../../utils";
 import CalendarArea from "../Calender/Calender1";
 import "./layout.css";
 import CheckCircleOutlineOutlinedIcon from "@mui/icons-material/CheckCircleOutlineOutlined";
 import loader from "../../assets/loading.svg";
+import { useMemo, useState } from "react";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function MapLayout() {
   const { filterData, setSelected, selected, fullDate, loading } = UseData();
+  const [variant, setVariant] = useState(60);
+
+  const showData = useMemo(() => {
+    return filterData?.slots?.filter(
+      (item) => timeDifference(item?.start_time, item?.end_time) === +variant
+    );
+  }, [filterData, variant]);
 
   return (
     <div className="cal-container">
@@ -24,9 +37,12 @@ export default function MapLayout() {
           <div className="section-show-base">
             <label>
               <p>SELECT FROM VARIANT</p>
-              <select>
-                <option>30 min</option>
-                <option>60 min</option>
+              <select
+                value={variant}
+                onChange={(e) => setVariant(e.target.value)}
+              >
+                <option value="60">60 min</option>
+                <option value="30">30 min</option>
               </select>
             </label>
             <hr></hr>
@@ -39,8 +55,8 @@ export default function MapLayout() {
               </div>
             ) : (
               <div className="time-stamps">
-                {filterData ? (
-                  filterData?.slots?.map((slot, index) => (
+                {showData?.length ? (
+                  showData?.map((slot, index) => (
                     <div
                       key={index}
                       className={
@@ -55,7 +71,7 @@ export default function MapLayout() {
                   ))
                 ) : (
                   <div className="slot-chip-notavailable">
-                    No slots available
+                    No slots available of {variant} mins
                   </div>
                 )}
               </div>
@@ -65,7 +81,9 @@ export default function MapLayout() {
       </div>
       <div className="cal-bottom">
         <p>POWERED BY TEHKUM</p>
-        <button>Next &gt;</button>
+        <button>
+          Next <KeyboardArrowDownIcon sx={{ color: "var(--primary-color)" }} />
+        </button>
       </div>
     </div>
   );

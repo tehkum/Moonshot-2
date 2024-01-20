@@ -1,5 +1,6 @@
 import "./header.css";
 import IosShareIcon from "@mui/icons-material/IosShare";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 export default function Header() {
   return (
@@ -11,7 +12,9 @@ export default function Header() {
         />
       </div>
       <div className="menu-items">
-        <p>Menu</p>
+        <p className="menu-btn">
+          Menu <KeyboardArrowDownIcon sx={{ color: "var(--primary-color)" }} />
+        </p>
         <p>Contact us</p>
         <p className="share-btn">
           <IosShareIcon sx={{ fontSize: "15px" }} />

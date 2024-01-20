@@ -32,9 +32,16 @@ export function formatToCustomString(inputDateString) {
     return null;
   }
 
-  const options = { weekday: 'long', month: 'short', day: 'numeric' };
+  const options = { weekday: "long", month: "short", day: "numeric" };
   const formattedString = inputDate.toLocaleDateString(undefined, options);
 
   return formattedString;
 }
 
+export function timeDifference(startingTime, endingTime) {
+  const startTime = new Date(startingTime);
+  const endTime = new Date(endingTime);
+  const timeDifference = endTime.getTime() - startTime.getTime();
+  const minutes = Math.floor(timeDifference / 60000);
+  return minutes;
+}

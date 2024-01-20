@@ -1,0 +1,48 @@
+header {
+    box-shadow: 0px 2px 4px 0px rgba(96, 97, 112, 0.16), 0px 0px 1px 0px rgba(40, 41, 61, 0.04);
+    height: 61px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+header img {
+    width: 221px;
+    margin-left: 40px;
+    height: 61px;
+    mix-blend-mode: multiply;
+}
+
+header .menu-items {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* font-family: "Poppins"; */
+    margin-right: 40px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--090-f-4-e, #090F4E);
+    text-align: right;
+    cursor: pointer;
+}
+
+header .menu-items .share-btn {
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    border-radius: 25px;
+    padding: .5rem;
+
+}
+
+header .menu-items .share-btn:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transition: background-color 0.3s ease-in-out;
+}

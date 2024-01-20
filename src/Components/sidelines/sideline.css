@@ -6,6 +6,7 @@
     position: fixed;
     bottom: 100px;
     left: -100px;
+    z-index: -1;
 }
 
 .sideLine-b {
@@ -15,7 +16,8 @@
     transform: rotate(-15deg);
     position: fixed;
     bottom: 14px;
-    left: -150px
+    left: -150px;
+    z-index: -1;
 }
 
 .sideLine-c {
@@ -25,6 +27,7 @@
     transform: rotate(-15deg);
     position: fixed;
     bottom: 400px;
+    z-index: -1;
     right: -150px;
 }
 
@@ -35,6 +38,7 @@
     transform: rotate(-15deg);
     position: fixed;
     bottom: 313px;
+    z-index: -1;
     right: -100px;
 }
 
@@ -45,5 +49,6 @@
     transform: rotate(-15deg);
     position: fixed;
     bottom: 254px;
-    right: -150px
+    z-index: -1;
+    right: -150px;
 }

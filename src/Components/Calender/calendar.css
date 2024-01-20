@@ -1,3 +1,7 @@
+.react-calendar {
+    border-radius: 7px;
+}
+
 .react-calendar__month-view__weekdays__weekday {
     color: var(--primary-color);
     text-decoration: none !important;

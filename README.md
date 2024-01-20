@@ -13,18 +13,23 @@ This project is a frontend application that replicates the functionality of the 
 ## Installation
 
 1. Clone the repository:
+
 ```
 
 git clone https://github.com/tehkum/Moonshot-2
 
 ```
+
 2. Navigate to the project directory:
+
 ```
 
 cd moonshot-2
 
 ```
+
 3. Install the dependencies:
+
 ```
 
 npm install
@@ -34,11 +39,13 @@ npm install
 ## Usage
 
 To start the application, run:
+
 ```
 
 npm start
 
 ```
+
 The application will start and can be accessed at `http://localhost:5173`.
 
 ## Contributing
@@ -48,4 +55,3 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-```

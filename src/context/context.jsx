@@ -2,12 +2,15 @@ import axios from "axios";
 import { PropTypes } from "prop-types";
 import { createContext, useContext, useEffect, useMemo, useState } from "react";
 import { toast } from "react-toastify";
+import { convertDateString } from "../utils";
 
 export const DataContext = createContext({});
 
 const DataProvider = ({ children }) => {
   const [data, setData] = useState([]);
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(
+    convertDateString(Date.now())
+  );
   const [selected, setSelected] = useState(null);
   const [fullDate, setFullDate] = useState(null);
   const [loading, setLoading] = useState(false);

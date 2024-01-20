@@ -82,7 +82,10 @@ export default function MapLayout() {
       <div className="cal-bottom">
         <p>POWERED BY TEHKUM</p>
         <button>
-          Next <KeyboardArrowDownIcon sx={{ color: "var(--primary-color)" }} />
+          Next{" "}
+          <KeyboardArrowDownIcon
+            sx={{ color: "var(--primary-color)", transform: "rotate(-90deg)" }}
+          />
         </button>
       </div>
     </div>
